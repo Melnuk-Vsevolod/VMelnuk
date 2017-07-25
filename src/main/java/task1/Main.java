@@ -4,19 +4,22 @@ public class Main {
 
 	public static void main(String[] args) {
 
-	
-		
-
 		ReciveRangeFromUser rrfru = new ReciveRangeFromUser(new RangeFrom(), new RangeTo());
 		rrfru.ReciveRangeNumFromUser();
 
 		MakeList ml = new MakeList(rrfru.getRangeFrom(), rrfru.getRangeTo());
-		
+
 		LogicForList ls = new LogicForList(ml.getListAllNumInRange());
 		ls.printArrays();
-		
-		
-		
+
+		int indexMaxOdd = ls.listOdd.size() - 1;
+		int indexMaxEven = ls.listEven.size() - 1;
+
+		int maxOdd = (Integer) (ls.listOdd.get(indexMaxOdd));
+		int maxEven = (Integer) (ls.listEven.get(indexMaxEven));
+
+		LogicFib lgF = new LogicFib(maxOdd, maxEven);
+		lgF.printPersentege();
 
 	}
 
