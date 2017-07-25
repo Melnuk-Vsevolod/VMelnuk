@@ -33,7 +33,7 @@ public class LogicForList {
 		for (int i = listEven.size(); i > -1; i--) {
 			System.out.println(listEven.get(i));
 		}
-	}
+	} 
 
 	public void printSumOddNumbers() {
 		int sum = 0;
