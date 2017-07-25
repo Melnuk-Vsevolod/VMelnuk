@@ -12,6 +12,9 @@ public class Main {
 		LogicForList ls = new LogicForList(ml.getListAllNumInRange());
 		ls.printArrays();
 
+		
+		
+		////////////////Fibonacci///////////////
 		int indexMaxOdd = ls.listOdd.size() - 1;
 		int indexMaxEven = ls.listEven.size() - 1;
 
