@@ -19,33 +19,34 @@ public class Main {
 		int amountOddNumFib = 1;
 		int amountEvenNumFib = 1;
 
-		/*
-		 * System.out.println("Enter last number");
-		 * 
-		 * Scanner sc = new Scanner(System.in); if (sc.hasNextInt()) {
-		 * lastNumber = sc.nextInt(); System.out.println(lastNumber); }
-		 * 
-		 * for (int i = lastNumber; i > 0; i--) { if (i % 2 == 0) {
-		 * 
-		 * System.out.println(i); sumEvenNumbers += i; } }
-		 * 
-		 * System.out.println("Sum even= " + sumEvenNumbers);
-		 * 
-		 * for (int i = 1; i < lastNumber + 1; i++) { if (i % 2 == 1) {
-		 * 
-		 * System.out.println(i); sumOddNumbers += i; } }
-		 * System.out.println("Sum odd= " + sumOddNumbers);
-		 */
-
-		//////////////////////////////////// Fibonacci
-
 		System.out.println("Enter last number");
 
 		Scanner sc = new Scanner(System.in);
 		if (sc.hasNextInt()) {
 			lastNumber = sc.nextInt();
-
+			System.out.println(lastNumber);
 		}
+
+		for (int i = lastNumber; i > 0; i--) {
+			if (i % 2 == 0) {
+
+				System.out.println(i);
+				sumEvenNumbers += i;
+			}
+		}
+
+		System.out.println("Sum even= " + sumEvenNumbers);
+
+		for (int i = 1; i < lastNumber + 1; i++) {
+			if (i % 2 == 1) {
+
+				System.out.println(i);
+				sumOddNumbers += i;
+			}
+		}
+		System.out.println("Sum odd= " + sumOddNumbers);
+
+		//////////////////////////////////// Fibonacci
 
 		System.out.println("Enter amount");
 
