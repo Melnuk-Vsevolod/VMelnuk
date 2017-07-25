@@ -2,9 +2,20 @@ package task1;
 
 public class ReciveRangeFromUser {
 
-	public void ReciveRangeFromUser() {
+	RangeFrom rangeFrom;
+	RangeTo rangeTo;
+	
+	
 
-		RangeFrom rangeFrom = new RangeFrom();
+	public ReciveRangeFromUser(RangeFrom rangeFrom, RangeTo rangeTo) {
+		super();
+		this.rangeFrom = rangeFrom;
+		this.rangeTo = rangeTo;
+	}
+
+	public void ReciveRangeNumFromUser() {
+
+		
 
 		while (rangeFrom.getwasNum() == false) {
 			System.out.println("Enter first number");
@@ -12,7 +23,7 @@ public class ReciveRangeFromUser {
 		}
 		System.out.println(rangeFrom.getNum());
 
-		RangeTo rangeTo = new RangeTo();
+	
 
 		boolean tmp = true;
 
@@ -23,4 +34,16 @@ public class ReciveRangeFromUser {
 		}
 		System.out.println(rangeTo.getNum());
 	}
+
+	public RangeFrom getRangeFrom() {
+		return rangeFrom;
+	}
+
+	
+
+	public RangeTo getRangeTo() {
+		return rangeTo;
+	}
+
+	
 }

@@ -20,6 +20,7 @@ public class MakeList {
 	}
 
 	public List getListAllNumInRange() {
+		createList();
 		return listAllNumInRange;
 	}
 
@@ -61,9 +62,9 @@ public class MakeList {
 
 		if (rF.getNum() == rT.getNum()) {
 			return true;
-		}
+		}else{
 		return false;
-
+		}
 	}
 
 }

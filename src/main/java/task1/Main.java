@@ -4,12 +4,18 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		// GetNumerFromClient getNumForRange = new GetNumerFromClient();
-
-		ReciveRangeFromUser rrfr=new ReciveRangeFromUser();
-		rrfr.ReciveRangeFromUser();
+	
 		
 
+		ReciveRangeFromUser rrfru = new ReciveRangeFromUser(new RangeFrom(), new RangeTo());
+		rrfru.ReciveRangeNumFromUser();
+
+		MakeList ml = new MakeList(rrfru.getRangeFrom(), rrfru.getRangeTo());
+		
+		LogicForList ls = new LogicForList(ml.getListAllNumInRange());
+		ls.printArrays();
+		
+		
 		
 
 	}
