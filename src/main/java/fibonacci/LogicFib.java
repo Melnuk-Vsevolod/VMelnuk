@@ -1,5 +1,6 @@
 package fibonacci;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LogicFib {
@@ -8,8 +9,8 @@ public class LogicFib {
 	// F2 – the biggest even number, user can enter the size of set (N);
 	// Program prints percentage of odd and even Fibonacci numbers;
 
-	private UserSetSizeFib size;
-	private List listAllFibNum;
+	private int size;
+	private List listAllFibNum = new ArrayList();
 
 	F1 f1 = new F1(0);
 	F2 f2 = new F2(0);
@@ -38,42 +39,47 @@ public class LogicFib {
 		this.f2 = f2;
 	}
 
-	public UserSetSizeFib getSize() {
+	public int getSize() {
 		return size;
 	}
 
-	public void setSize(UserSetSizeFib size) {
-		this.size = size;
+	public void setSize(int i) {
+		this.size = i;
 	}
 
 	private void fibNumToList() {
+		System.out.println("Enter N");
+		N n= new N();
+		n.reciveNumber();
+		setSize(n.getNum());
 		if (f1.getNum() < f2.getNum()) {
-			System.out.println(f1.getNum() + "<------>" + f2.getNum());
-			listAllFibNum.add(f1.getNum());
-			listAllFibNum.add(f2.getNum());
-
-			for (int i = 0; i < size.getNum(); i++) {
+		
+			listAllFibNum.add((int)f1.getNum());
+			listAllFibNum.add((int)f2.getNum());
+			
+			
+			for (int i = 0; i < size; i++) {
 				int temp = f1.getNum();
 
-				f1.setNum(f2.getNum());
-				f2.setNum(f1.getNum() + temp);
+				f1.setNum((int)f2.getNum());
+				f2.setNum((int)f1.getNum() + temp);
 
-				listAllFibNum.add(f2);
+				listAllFibNum.add(f2.getNum());
 			}
 
 		} else {
-			System.out.println(f1.getNum() + "<------?" + f2.getNum());
+			
 
-			listAllFibNum.add(f2.getNum());
-			listAllFibNum.add(f1.getNum());
+			listAllFibNum.add((int)f2.getNum());
+			listAllFibNum.add((int)f1.getNum());
 
-			for (int i = 0; i < size.getNum(); i++) {
+			for (int i = 0; i < size; i++) {
 				int temp = f2.getNum();
 
-				f2.setNum(f1.getNum());
-				f1.setNum(f2.getNum() + temp);
+				f2.setNum((int)f1.getNum());
+				f1.setNum((int)f2.getNum() + temp);
 
-				listAllFibNum.add(f1);
+				listAllFibNum.add(f1.getNum());
 
 			}
 		}
@@ -85,7 +91,8 @@ public class LogicFib {
 		int amountEven = 0;
 
 		for (int i = 0; i < listAllFibNum.size(); i++) {
-			int tmp = (Integer) listAllFibNum.get(i);
+			int tmp =   (Integer) listAllFibNum.get(i);
+			
 			if (tmp % 2 == 0) {
 				amountEven++;
 			} else {
