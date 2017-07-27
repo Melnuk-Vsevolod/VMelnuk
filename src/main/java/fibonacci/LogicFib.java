@@ -1,4 +1,4 @@
-package task1;
+package fibonacci;
 
 import java.util.List;
 

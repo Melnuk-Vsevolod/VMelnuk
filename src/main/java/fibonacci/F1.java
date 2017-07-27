@@ -1,13 +1,13 @@
-package task1;
+package fibonacci;
 
-public class F2 {
+public class F1 {
 	private int num = 0;
 
-	public F2(int num) {
+	public F1(int num) {
 		super();
 		this.num = num;
 	}
-	public F2() {
+	public F1() {
 		super();
 		
 	}

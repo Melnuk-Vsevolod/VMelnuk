@@ -45,15 +45,16 @@ public class LogicForList {
 
 		for (int i = 0; i < listOdd.size(); i++) {
 
-			System.out.println(listOdd.get(i));
+			System.out.print(listOdd.get(i)+" ");
 		}
 	}
 
 	private void printEvenNumbers() {
 
 		for (int i = listEven.size() - 1; i > -1; i--) {
-
-			System.out.println(listEven.get(i));
+			
+			
+			System.out.print(listEven.get(i)+" ");
 		}
 	}
 
@@ -62,6 +63,7 @@ public class LogicForList {
 		for (int i = 0; i < listOdd.size(); i++) {
 			sum += (Integer) listOdd.get(i);
 		}
+		System.out.println();
 		System.out.println("Odd sum= " + sum);
 	}
 
@@ -76,6 +78,7 @@ public class LogicForList {
 	public void printArrays() {
 		createOddAndEvenArray();
 		printOddNumbers();
+		System.out.println();
 		printEvenNumbers();
 		printSumOddNumbers();
 		printSumEvenNumbers();
